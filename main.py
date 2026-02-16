@@ -34,6 +34,16 @@ class Visit(BaseModel):
 
 print('backend is on!\n')
 
+
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def root():
+    return {"message": "API is running 🚀"}
+
+
 @app.post('/api')
 async def consultation(visit:Visit):
     user_prompt = f"""this is visitor details, create a short summary for this
