@@ -1,5 +1,7 @@
 fastapi
-uvicorn
-pydantic
+uvicorn[standard]
+perplexityai
 python-dotenv
-perplexity
+pydantic
+httpx
+gunicorn
